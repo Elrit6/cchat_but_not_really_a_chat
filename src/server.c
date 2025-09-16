@@ -79,8 +79,9 @@ void rem_cli(const SOCKET cli_sock) {
 	closesocket(cli_sock);
 	
 	char cli_addr[addr_str_len];
-	get_cli_addr(cli_sock, cli_addr);
-	printf("- <%s>\n", cli_addr);
+	if (get_cli_addr(cli_sock, cli_addr)) {
+		printf("- <%s>\n", cli_addr);
+	}
 	rem_cli_addr(cli_sock);
 }
 

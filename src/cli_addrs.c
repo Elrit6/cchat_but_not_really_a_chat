@@ -1,6 +1,4 @@
 #include "cli_addrs.h"
-
-#include <stdio.h> //TODO REM
 #include <string.h>
 
 static Cli_Addr cli_addrs[max_cli_count];
